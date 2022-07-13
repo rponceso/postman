@@ -1,0 +1,890 @@
+{
+	"info": {
+		"_postman_id": "f41ed44b-2bcc-4eb7-b1f5-923fc01439cc",
+		"name": "Spring-BootCamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Productos Por Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/products/62bce7bedb999f1b6a2b5304",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"products",
+								"62bce7bedb999f1b6a2b5304"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Eleven\",\r\n\t\"address\":\"Av Javier Prado 1035\",\r\n\t\"email\":\"luz@gmail.com\",\r\n\t\"phone\":\"999666331\",\r\n\t\"numberDocument\":\"42345611\",\r\n    \"customerType\":\"P\",\r\n    \"dateBirthDay\":\"1990-05-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/62c8ad2b6667192dc267fb07",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"62c8ad2b6667192dc267fb07"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ayudin a la grasa\",\r\n\t\"address\":\"Calle Los Extraños 125\",\r\n\t\"email\":\"limpio@gmail.com\",\r\n\t\"phone\":\"999555904\",\r\n\t\"numberDocument\":\"66666666\",\r\n    \"customerType\":\"B\",\r\n    \"dateBirthDay\":\"1990-05-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customers/62ca4d144f063812d21b9e08",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"62ca4d144f063812d21b9e08"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/62b5ed135e49c92ed485ed1b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"62b5ed135e49c92ed485ed1b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cliente por Numero de Documento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/numberDocument/66666666",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"numberDocument",
+								"66666666"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cliente por Tipo de Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/customerType/B",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"customerType",
+								"B"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas Bancarias",
+			"item": [
+				{
+					"name": "Listar Cuentas Por Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/accounts/customer/62c8ac1b6667192dc267fb06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts",
+								"customer",
+								"62c8ac1b6667192dc267fb06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Cuentas Por Rango de Fecha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\":\"2022-07-03\",\r\n    \"endDate\":\"2022-07-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/accounts/reporting",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts",
+								"reporting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"accountType\" : {\r\n        \"code\" : \"CC\",\r\n        \"name\" : \"Ahorros5\",\r\n        \"description\": \"Es una cuenta de ahorros\"\r\n    },\r\n   \"accountNumber\":\"8756421\",\r\n   \"currency\":\"SOLES\",\r\n   \"amount\":3000,\r\n   \"customer\":{\r\n      \"id\":\"62bce7bedb999f1b6a2b5304\"\r\n   },\r\n   \"state\":\"A\",   \r\n   \"maxLimitMovementPerMonth\":1,\r\n   \"principal\":false,\r\n   \"headlines\":[\r\n      {\r\n         \"name\":\"juan\",\r\n         \"lastname\":\"perez\",\r\n         \"numberDocument\":\"12345678\",\r\n         \"email\":\"juan@hotmail.com\"\r\n      }\r\n   ],\r\n   \"authorizedSigners\":[\r\n      {\r\n         \"name\":\"maria\",\r\n         \"lastname\":\"lopez\",\r\n         \"numberDocument\":\"45678912\",\r\n         \"email\":\"maria@hotmail.com\"\r\n      }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cuenta por Numero de Cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/accounts/accountNumber/8888855555",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts",
+								"accountNumber",
+								"8888855555"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"accountType\":\"Ahorro\",\r\n   \"accountNumber\":\"123456123459\",\r\n   \"currency\":\"SOLES\",\r\n   \"amount\":2000,\r\n   \"customer\":{\r\n      \"id\":\"62b1ee49a3eda171a58d14bf\"\r\n   },\r\n   \"state\":\"A\",\r\n   \"maxLimitMovementPerMonth\":1,\r\n   \"headlines\":[\r\n      {\r\n         \"name\":\"juanito\",\r\n         \"lastname\":\"perezito\",\r\n         \"numberDocument\":\"22345678\",\r\n         \"email\":\"juan@gmail.com\"\r\n      }\r\n   ],\r\n   \"authorizedSigners\":[\r\n      {\r\n         \"name\":\"maria antonieta\",\r\n         \"lastname\":\"lopezito\",\r\n         \"numberDocument\":\"85678912\",\r\n         \"email\":\"maria@yahoo.com\"\r\n      }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/accounts/62b1562e7476f350e14bd3e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts",
+								"62b1562e7476f350e14bd3e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cuenta por Identificador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/accounts/62b51cfa98c18862d82ef8cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts",
+								"62b51cfa98c18862d82ef8cf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarjetas de Credito",
+			"item": [
+				{
+					"name": "Listar Tarjetas de Credito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/credit-card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"credit-card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Tarjeta de Credito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nameCard\":\"Ahorro\",\r\n   \"pan\":\"123456123456\",\r\n   \"cardType\":\"Business\",\r\n   \"cvv\":\"123\",\r\n   \"monthYearExp\":\"202005\",\r\n   \"cardBrand\":\"VISA\",\r\n   \"balanceAmount\":2000,\r\n   \"creditLimit\":10000,\r\n   \"totalConsumption\":100,\r\n   \"active\":true,\r\n   \"chargeDay\":15,\r\n   \"customer\":{\r\n      \"id\":\"62bce7bedb999f1b6a2b5304\"\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/credit-card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"credit-card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Tarjeta de Credito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/credit-card/123456123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"credit-card",
+								"123456123456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Tarjeta de Credito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nameCard\":\"Ahorro2\",\r\n   \"pan\":\"123456123456\",\r\n   \"cardType\":\"Business\",\r\n   \"cvv\":\"123\",\r\n   \"monthYearExp\":\"202005\",\r\n   \"cardBrand\":\"VISA\",\r\n   \"balanceAmount\":2000,\r\n   \"creditLimit\":10000,\r\n   \"totalConsumption\":100,\r\n   \"active\":true,\r\n   \"chargeDay\":15,\r\n   \"customer\":{\r\n      \"id\":\"62b1516645462142c0ccc453\"\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/credit-card/62b1660d90ad82538a04798c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"credit-card",
+								"62b1660d90ad82538a04798c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credito",
+			"item": [
+				{
+					"name": "Listar Creditos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Credito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"capital\":100,\r\n\t\"paymentDate\":\"2022-07-10\",\r\n\t\"expiredDate\":\"2022-07-11\",\r\n\t\"contractNumber\":\"123456\",\r\n\t\"amountInitial\":90,\r\n\t\"amount\":100,\r\n\t\"chargeDay\":\"1\",\r\n\t\"commission\":1,\r\n\t\"interestRate\":0.1,\r\n\t\"debitor\":false,\r\n\t\"customer\":{\r\n      \"id\":\"62bce7bedb999f1b6a2b5304\"\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Credito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/credit/62c1317f77dfc0498766e571",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"credit",
+								"62c1317f77dfc0498766e571"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Creditos Vencido por Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/credit/expiredDebt/customer/62bce7bedb999f1b6a2b5304",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"credit",
+								"expiredDebt",
+								"customer",
+								"62bce7bedb999f1b6a2b5304"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Credito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"capital\":200,\r\n\t\"paymentDate\":\"2022-07-10\",\r\n\t\"expiredDate\":\"2022-07-11\",\r\n\t\"contractNumber\":\"123456\",\r\n\t\"amountInitial\":90,\r\n\t\"amount\":100,\r\n\t\"chargeDay\":\"1\",\r\n\t\"commission\":1,\r\n\t\"interestRate\":0.1,\r\n\t\"debitor\":false,\r\n\t\"customer\":{\r\n      \"id\":\"62bce7bedb999f1b6a2b5304\"\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/credit/62c1317f77dfc0498766e571",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"credit",
+								"62c1317f77dfc0498766e571"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transacciones",
+			"item": [
+				{
+					"name": "Registrar Transacciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"typeOperation\" : {\r\n        \"code\" : \"W\",\r\n        \"name\" : \"RETIRO\"\r\n    },\r\n   \"account\":{\r\n      \"id\":\"62b51cfa98c18862d82ef8cf\"\r\n   },\r\n   \"amount\":380,\r\n   \"details\":\"Transaccion de dinero RETIRO\",\r\n   \"dateOperation\":\"2020-08-20 19:10:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Transacciones Deposito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"accountRoot\":{\r\n      \"id\":\"62c5d4a104cfa94e34b22da3\"\r\n   },\r\n   \"accountDestination\":{\r\n      \"id\":\"62c5d4b404cfa94e34b22da4\"\r\n   },\r\n   \"amount\":380,\r\n   \"details\":\"Transaccion de dinero RETIRO\",\r\n   \"depositor\":{\r\n      \"id\":\"62bce7bedb999f1b6a2b5304\"\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/transactions/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"transactions",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Transaccion por Identificador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/transactions/62b55bb1e55982366e9c743f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"transactions",
+								"62b55bb1e55982366e9c743f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Transacciones por Cuenta Bancaria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/transactions/account/62b51cfa98c18862d82ef8cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"transactions",
+								"account",
+								"62b51cfa98c18862d82ef8cf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarjetas de Debito",
+			"item": [
+				{
+					"name": "Listar Tarjetas de Debito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/debit-card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"debit-card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Tarjetas de Debito con cuenta principal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/debit-card/62c4a7daabe904426ac20fa4/principal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"debit-card",
+								"62c4a7daabe904426ac20fa4",
+								"principal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Tarjetas de Debito con cuenta principal saldo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/debit-card/62c4a7daabe904426ac20fa4/principal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"debit-card",
+								"62c4a7daabe904426ac20fa4",
+								"principal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Tarjeta de Debito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nameCard\":\"Ahorro\",\r\n   \"pan\":\"123456123456\",\r\n   \"cardType\":\"Business\",\r\n   \"cvv\":\"123\",\r\n   \"monthYearExp\":\"202005\",\r\n   \"cardBrand\":\"VISA\",\r\n   \"active\":true,\r\n   \"customer\":{\r\n      \"id\":\"62bce7bedb999f1b6a2b5304\"\r\n   },\r\n   \"accounts\":[\r\n      {\r\n         \"id\":\"62c4a7c1ac5c1a03adedc9b1\"\r\n      }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/debit-card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"debit-card"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Listar Productos Por Rango de Fecha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaInicio\":\"2022-07-01\",\r\n    \"fechaFin\":\"2022-07-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/api/products/reporting",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"products",
+								"reporting"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Obtener Config Server",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "prueba",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://spring-config-docker.azurewebsites.net/api-rest-customers/default",
+					"protocol": "http",
+					"host": [
+						"spring-config-docker",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api-rest-customers",
+						"default"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
